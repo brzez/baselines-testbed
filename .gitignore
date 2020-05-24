@@ -1,0 +1,6 @@
+tensorboard/
+venv/
+copy.sh
+*.zip
+.idea/
+.vscode/
