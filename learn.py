@@ -11,7 +11,10 @@ from stable_baselines import PPO2
 
 last_time = datetime.now().timestamp()
 
-net_name = "ppo2"
+net_name = "ppo2_2x64"
+policy_kwargs = dict(
+    net_arch=[64, 64]
+)
 
 def cb(a, b):
     global last_time
@@ -23,10 +26,12 @@ def cb(a, b):
 
 # multiprocess environment
 env = make_vec_env('MinitaurBulletEnv-v0', n_envs=4)
+# env = gym.make('MinitaurBulletEnv-v0', render=True)
 
 try:
     model = PPO2.load(
         net_name,
+        policy_kwargs=policy_kwargs,
         env=env
     )
 except ValueError:
