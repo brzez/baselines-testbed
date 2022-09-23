@@ -19,7 +19,7 @@ numpy==1.18.4
 opencv-python==4.2.0.34
 pandas==1.0.3
 pkg-resources==0.0.0
-protobuf==3.15.0
+protobuf==3.18.3
 pybullet==2.7.9
 pyglet==1.5.0
 pyparsing==2.4.7
